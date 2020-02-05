@@ -1,1 +1,1 @@
-This is a C project
+# This is a C project
