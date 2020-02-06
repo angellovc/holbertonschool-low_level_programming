@@ -15,8 +15,8 @@ int main(void)
 		{
 			if ((n1 && n2 != 57) || (n2 && n1 != 0))
 			{
-				putchar (space);
-				putchar(comma);
+				putchar (comma);
+				putchar(space);
 			}
 			putchar(n1);
 			putchar(n2);
