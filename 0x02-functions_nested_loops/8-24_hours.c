@@ -6,11 +6,13 @@
  */
 void jack_bauer(void)
 {
-	int h1, h2, m1, m2, space = 32, colon = 58;
+	int h1, h2, m1, m2, space = 32, colon = 58, i = 57;
 
 	for (h1 = 48; h1 <= 50; h1++)
 	{
-		for (h2 = 48; h2 <= 51; h2++)
+		if (h1 == 50 && h2)
+			i = 51;
+		for (h2 = 48; h2 <= i; h2++)
 		{
 			for (m1 = 48; m1 <= 53; m1++)
 			{
