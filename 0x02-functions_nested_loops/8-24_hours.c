@@ -6,7 +6,7 @@
  */
 void jack_bauer(void)
 {
-	int h1, h2, m1, m2, space = 32, colon = 58, i = 57;
+	int h1, h2, m1, m2, colon = 58, i = 57;
 
 	for (h1 = 48; h1 <= 50; h1++)
 	{
@@ -23,7 +23,6 @@ void jack_bauer(void)
 					_putchar(colon);
 					_putchar(m1);
 					_putchar(m2);
-					_putchar(space);
 					_putchar('\n');
 				}
 			}
