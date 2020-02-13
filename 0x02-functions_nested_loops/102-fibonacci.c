@@ -20,4 +20,5 @@ int main(void)
 		number1 = number2;
 		number2 = temp;
 	}
+	return (0);
 }
