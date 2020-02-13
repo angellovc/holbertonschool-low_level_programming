@@ -1,0 +1,49 @@
+ls
+0-isupper.c             5-more_numbers.c    8-print_square.c   _putchar.c
+1-isdigit.c             6-print_line.c      8-print_square.c~  README.md
+2-mul.c                 7                   holberton.h        *shell*
+3-print_numbers.c       7-print_diagonal.c  main.c             #*shell*#
+4-print_most_numbers.c  8                   main.c~
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# gcc -Wall -pedantic -Werror -Wextra _putchar.c main.c 8-print_square.c -o 8
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# ./8
+##
+##
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# gcc -Wall -pedantic -Werror -Wextra _putchar.c main.c 8-print_square.c -o 8
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# ./8
+##
+##
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# gcc -Wall -pedantic -Werror -Wextra _putchar.c main.c 8-print_square.c -o 8
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# ./8
+##
+##
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+root@vagrant-ubuntu-trusty-64:/home/holbertonschool-low_level_programming/0x04-more_functions_nested_loops# 
