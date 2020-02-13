@@ -7,6 +7,7 @@
 int main(void)
 {
 	long int y = 2, number = 612852475143;
+
 	while (number != 1)
 	{
 		if (number % y == 0)
