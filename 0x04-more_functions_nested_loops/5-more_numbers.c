@@ -14,8 +14,8 @@ void more_numbers(void)
 			{
 				last_digit = n % 10;
 				next_digit = n / 10;
-				_putchar('0' + next_digit);
-			if (n > 9)
+				if (n > 9)
+					_putchar('0' + next_digit);
 				_putchar('0' + last_digit);
 			}
 		i++;
