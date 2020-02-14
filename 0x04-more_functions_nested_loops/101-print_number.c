@@ -6,14 +6,12 @@
  */
 void print_number(int n)
 {
-
 	if (n > 0)
 		reverse(n);
 	else if (n == 0)
 		_putchar(n + '0');
 	else
 		reverse_negative(n);
-
 }
 /**
  *reverse - reverse numbers
@@ -46,7 +44,7 @@ void reverse_negative(int n)
 {
 	int reverse_n = 0, last_number, i;
 
-	i = -n ;
+	i = -n;
 	while (i != 0)
 	{
 		last_number = i % 10;
