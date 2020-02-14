@@ -12,9 +12,7 @@ int main(void)
 	while (temp <= 4000000)
 	{
 		temp = number1 + number2;
-		if (temp >= 4000000)
-			break;
-			printf(", %li", temp);
+		printf(", %li", temp);
 		number1 = number2;
 		number2 = temp;
 	}
