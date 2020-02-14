@@ -10,11 +10,11 @@ void print_number(int n)
 		reverse(n);
 	else if (n == 0)
 		_putchar(n + '0');
-	else (n < 0)
-	     {
+	else if (n < 0)
+	{
 		_putchar(45);
 		reverse(n);
-	     }
+	}
 }
 /**
  *reverse - reverse numbers
