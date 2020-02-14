@@ -10,8 +10,11 @@ void print_number(int n)
 		reverse(n);
 	else if (n == 0)
 		_putchar(n + '0');
-	else
+	else (n < 0)
+	     {
+		_putchar(45);
 		reverse(n);
+	     }
 }
 /**
  *reverse - reverse numbers
@@ -23,10 +26,7 @@ void reverse(int n)
 	int reverse_n = 0, last_number;
 
 	if (n < 0)
-	{
 		n = -n;
-		_putchar(45);
-	}
 	while (n != 0)
 	{
 		last_number = n % 10;
