@@ -14,6 +14,5 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 void reverse(int n);
-void reverse_negative(int n);
 
 #endif
