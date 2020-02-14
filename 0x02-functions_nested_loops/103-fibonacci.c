@@ -13,7 +13,7 @@ int main(void)
 	{
 		temp = number1 + number2;
 		if (temp % 2 == 0)
-	   		printf(", %li", temp);
+			printf(", %li", temp);
 		number1 = number2;
 		number2 = temp;
 	}
