@@ -8,7 +8,6 @@ int main(void)
 {
 	long int number1 = 1, number2 = 2, temp = 0, even = 2;
 
-	printf("%li, %li", number1, number2);
 	while (temp <= 4000000)
 	{
 		temp = number1 + number2;
@@ -17,9 +16,9 @@ int main(void)
 		if (temp % 2 == 0)
 		{
 			even = even + temp;
-			printf(", %li", even);
+			if (even >= 4000000)
+				printf("%li\n", even);
 		}
 	}
-	printf("\n");
 	return (0);
 }
