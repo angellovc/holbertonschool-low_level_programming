@@ -15,5 +15,6 @@ void print_to_98(int n);
 void print_times_table(int n);
 void print_1_digit(int ressult, int row, int col, int n);
 void print_2_digit(int ressult, int row, int col, int n);
+void print_number(int n);
 
 #endif

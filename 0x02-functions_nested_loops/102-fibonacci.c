@@ -10,10 +10,10 @@ int main(void)
 	int i;
 
 	printf("%li, %li, ", number1, number2);
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 48; i++)
 	{
 		temp = number1 + number2;
-		if (i >= 50)
+		if (i >= 48)
 			printf("%li\n", temp);
 		else
 			printf("%li, ", temp);
