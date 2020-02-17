@@ -24,7 +24,9 @@ void print_number(int n)
 void reverse(int n)
 {
 	int reverse_n = 0, last_number;
+	unsigned n_positive;
 
+n_positive = -n
 	if (n < 0)
 		n = -n;
 	while (n != 0)

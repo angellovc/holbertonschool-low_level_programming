@@ -21,7 +21,7 @@ int main(void)
 					putchar(space);
 					putchar(min);
 					putchar(seg);
-					if (!(hour1 == 57 && hour2 == 57 && min == 57 && seg == 57))
+					if (hour1 != 57 && hour2 != 57 && min == 57 && seg == 57)
 					{
 						putchar(comma);
 						putchar(space);
