@@ -17,7 +17,7 @@ void rev_string(char *s)
 		s[i] = s[y];
 		s[y] = tmp;
 		y++;
-		if (i == y)
+		if (i < y)
 			break;
 	}
 }
