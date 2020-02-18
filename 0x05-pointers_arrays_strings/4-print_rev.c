@@ -1,6 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
-
+/**
+ *print_rev - reverse an array
+ *@s: receive and array
+ *
+ */
 void print_rev(char *s)
 {
 	int i = 0;

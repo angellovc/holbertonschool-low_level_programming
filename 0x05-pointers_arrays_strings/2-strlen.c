@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ *_strlen - mesure the lenght of an array
+ *@s: receive an array
+ *
+ *Return: i
+ */
 int _strlen(char *s)
 {
 	int i = 0;

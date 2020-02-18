@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ *_puts - print a string
+ *@str: receive a char arry
+ *
+ */
 void _puts(char *str)
 {
 	int i = 0;
