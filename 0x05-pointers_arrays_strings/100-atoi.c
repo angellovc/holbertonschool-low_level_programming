@@ -19,7 +19,7 @@ int _atoi(char *s)
 		else if (s[i] == '+')
 			sign = sign * 1;
 
-		if (s[i] <= '9' && s[i] >= '0' && s[i + 1] < 48 && s[i + 1] < 57)
+		if (s[i] < 47 && s[i] > 58 && s[i + 1] < 48 && s[i + 1] < 57)
 			break;
 	}
 	return (number * sign);
