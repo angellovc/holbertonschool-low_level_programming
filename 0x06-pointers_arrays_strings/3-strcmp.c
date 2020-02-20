@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *_srtcmp - this is a strcmp function
+ *_strcmp - this is a strcmp function
  *@s1: array
  *@s2: array
  *Return: int
