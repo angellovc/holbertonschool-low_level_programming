@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ **_strncat - concatenate
+ *@dest: array
+ *@src: array
+ *@n: int
+ *Return: pointer
+ */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0, y = 0;
