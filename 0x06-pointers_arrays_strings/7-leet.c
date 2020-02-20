@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ **leet - encode into 1337
+ *@s: array
+ *
+ *Return: array
+ */
 char *leet(char *s)
 {
 	int i = 0, y = 0;
