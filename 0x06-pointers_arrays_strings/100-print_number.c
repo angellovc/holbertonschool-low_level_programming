@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- *print_number (int n)
+ *print_number - print an int using puchar
  *@n: receive a number
  */
 void print_number(int n)
 {
 	int reverse_n = 0, last_number;
 	unsigned int i = 0;
+
 	if (n < 0)
 	{
-		i = -n ;
+		i = -n;
 		_putchar(45);
 	}
 	else if (n > 0)
