@@ -5,8 +5,7 @@
  */
 void print_number(int n)
 {
-	int reverse_n = 0, last_number;
-	unsigned int i = 0;
+	unsigned int i = 0, next_number = 0, last_number = 0;
 
 	if (n < 0)
 	{
@@ -17,16 +16,10 @@ void print_number(int n)
 		i = n;
 	else if (n == 0)
 		_putchar(i + '0');
-	while (i != 0)
-	{
-		last_number = i % 10;
-		reverse_n = (reverse_n * 10) + last_number;
-		i = i / 10;
-	}
-	while (reverse_n != 0)
-	{
-		last_number = reverse_n % 10;
-		reverse_n = reverse_n / 10;
-		_putchar('0' + last_number);
-	}
+
+	next_number = i / 10;
+	if (next_number != 0)
+		print_number(next_number);
+	last_number = i % 10;
+	_putchar('0' + last_number);
 }
