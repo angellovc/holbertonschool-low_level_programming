@@ -7,12 +7,20 @@
 char *rot13(char *s)
 {
 	int i = 0, y = 0;
-	char alph[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-	char code[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+	char alph[52] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char code[52] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
 	for (i = 0; s[i] != '\0'; i++)
-		for (y = 0; alph[y] != '\0'; y++)
+	{
+		for (y = 0; y <= 51; y++)
+		{
 			if (s[i] == alph[y])
+			{
 				s[i] = code[y];
+				break;
+				y++;
+			}
+		}
+	}
 	return (s);
 }
