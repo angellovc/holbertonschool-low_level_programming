@@ -6,7 +6,7 @@
 void print_number(int n)
 {
 	int reverse_n = 0, last_number;
-	int i = 0;
+	unsigned int i = 0;
 
 	if (n < 0)
 	{
@@ -16,7 +16,7 @@ void print_number(int n)
 	else if (n > 0)
 		i = n;
 	else if (n == 0)
-		_putchar(48);
+		_putchar(i + '0');
 	while (i != 0)
 	{
 		last_number = i % 10;
