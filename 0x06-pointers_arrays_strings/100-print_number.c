@@ -14,8 +14,6 @@ void print_number(int n)
 	}
 	else if (n > 0)
 		i = n;
-	else if (n == 0)
-		_putchar(i + '0');
 
 	next_number = i / 10;
 	if (next_number != 0)
