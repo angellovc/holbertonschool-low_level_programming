@@ -1,9 +1,20 @@
+#include "holberton.h"
 #include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+        char *n = "100";
+        char *m = "1";
+        char r[100];
+        char r2[10];
+        char r3[11];
+        char *res;
 
-	printf("%li\n", sizeof(a));
-	printf("%li\n", sizeof(int));
+	infinite_add(n, m, r);
 	return (0);
 }
