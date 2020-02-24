@@ -5,7 +5,7 @@ int main ()
 {
 	char str[] ="This is a simple string";
 	char *pch;
-	pch = strstr (str,"x");
+	pch = strstr (str,"S");
 	puts (pch);
 	return 0;
 }
