@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <string.h>
 
-int main ()
+int main(void)
 {
-	char str[] ="This is a simple string";
-	char *pch;
-	pch = strstr (str,"S");
-	puts (pch);
-	return 0;
+	char s = "abcdef";
+
+	printf("%c\n", s[0]);
+	return (0);
 }
