@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	_print_rev_recursion("\nColton Walker");
+	_puts_recursion("Betty Holberton");
 	return (0);
 }

@@ -1,13 +1,16 @@
 #include "holberton.h"
-
+/**
+ *_puts_recursion - print array using recursion
+ *@s: position 0 of a string
+ */
 void _puts_recursion(char *s)
 {
-	char *p;
-
-	_putchar(s[0]);
-	p = (s + 1);
-	if (*p != '\0')
-		_puts_recursion(p);
+	if (*s)
+		_putchar(*s);
+	if (*(s + 1) != '\0')
+	{
+		_puts_recursion((s + 1));
+	}
 	else
 		_putchar('\n');
 }
