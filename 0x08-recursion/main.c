@@ -10,13 +10,7 @@ int main(void)
 {
 	int r;
 
-	r = is_palindrome("level");
-	printf("%d\n", r);
-	r = is_palindrome("redder");
-	printf("%d\n", r);
-	r = is_palindrome("holberton");
-	printf("%d\n", r);
-	r = is_palindrome("step on no pets");
+	r = wildcmp("main.c", "main.c");
 	printf("%d\n", r);
 	return (0);
 }
