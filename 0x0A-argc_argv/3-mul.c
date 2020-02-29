@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ *main - entry point
+ *@argc: number of arguments
+ *@argv: arguments
+ *Return: 0
+ */
 int main(int argc, char **argv)
 {
 	int ressult = 1, i = 1;

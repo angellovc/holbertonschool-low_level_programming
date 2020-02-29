@@ -1,6 +1,6 @@
 #ifndef holberton
 #define holberton
 
-int itsdigit(char *s);
+int letters_digits(char, char **s);
 
 #endif
