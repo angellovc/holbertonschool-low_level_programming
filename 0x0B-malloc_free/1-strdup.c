@@ -14,10 +14,10 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 	i++;
-	copy = malloc(i / sizeof(char));
+	copy = malloc(i * sizeof(char));
 	if (copy == '\0')
 		return ('\0');
-	while (y < (i / sizeof(char)))
+	while (y < (i * sizeof(char)))
 	{
 		copy[y] = str[y];
 		y++;
