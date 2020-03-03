@@ -9,7 +9,7 @@ char *_strdup(char *str)
 	unsigned int i = 0;
 	char *copy;
 
-	if (*str == '\0')
+	if (str == '\0')
 		return ('\0');
 	copy = malloc(sizeof(str));
 	if (copy == '\0')
