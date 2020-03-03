@@ -1,0 +1,19 @@
+#include <stdlib.h>
+/**
+ *alloc_grid - make a grid
+ *@width: witdh
+ *@height: height of the grid
+ *Return: return a grid
+ */
+int **alloc_grid(int width, int height)
+{
+	int i = 0, y = 0, **grid;
+
+	grid = malloc(height * sizeof(int *));
+	for (i = 0; i < height; i++)
+		grid[i] = malloc(width * sizeof(int *));
+	for (i = 0; i < height; i++)
+		for (y = 0; y < width; y++)
+			grid[i][y] = 0;
+	return (grid);
+}
