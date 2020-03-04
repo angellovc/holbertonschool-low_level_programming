@@ -8,8 +8,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, y = 0;
-	unsigned int l = 0;
+	int i = 0, y = 0, l = 0;
 	char *s;
 
 	if (ac <= 0 || av == '\0')
@@ -29,6 +28,7 @@ char *argstostr(int ac, char **av)
 		s[l] = '\n';
 		l++;
 	}
+	s[l] = 0;
 	return (s);
 }
 /**
@@ -39,8 +39,7 @@ char *argstostr(int ac, char **av)
  */
 int _lenght(int ac, char **av)
 {
-	int i = 0, y = 0;
-	unsigned int lenght = 0;
+	int i = 0, y = 0, lenght = 0;
 
 	for (i = 1; i < ac; i++)
 	{
