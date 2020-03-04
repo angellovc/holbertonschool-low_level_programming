@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 	if (s == NULL)
 		return ('\0');
 	l = 0;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (y = 0; av[i][y] != '\0'; y++)
 		{
@@ -40,7 +40,7 @@ int _lenght(int ac, char **av)
 {
 	int i = 0, y = 0, lenght = 0;
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (y = 0; av[i][y] != '\0'; y++)
 			lenght++;
