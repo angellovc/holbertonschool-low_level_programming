@@ -46,5 +46,6 @@ int _lenght(int ac, char **av)
 			lenght++;
 	lenght++;
 	}
+	lenght++;
 	return (lenght);
 }
