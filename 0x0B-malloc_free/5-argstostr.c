@@ -47,7 +47,8 @@ int _lenght(int ac, char **av)
 	{
 		for (y = 0; av[i][y] != '\0'; y++)
 			lenght++;
-	lenght++;
 	}
+	lenght++;
+
 	return (lenght);
 }
