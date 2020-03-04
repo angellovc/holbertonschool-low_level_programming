@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  *argstostr - concatenate all the arguments
  *@ac: number of arguments
@@ -43,8 +44,11 @@ int _lenght(int ac, char **av)
 	unsigned int lenght = 0;
 
 	for (i = 1; i < ac; i++)
+	{
 		for (y = 0; av[i][y] != '\0'; y++)
 			lenght++;
-	lenght++;
+		lenght++;
+	}
+	printf("%i\n", lenght);
 	return (lenght);
 }
