@@ -12,7 +12,7 @@ char *argstostr(int ac, char **av)
 	unsigned int l = 0;
 	char *s;
 
-	if (ac < 2 || av == '\0')
+	if (ac <= 0 || av == '\0')
 		return ('\0');
 	l = _lenght(ac, av);
 	s = malloc(l * sizeof(char));
@@ -29,9 +29,6 @@ char *argstostr(int ac, char **av)
 		s[l] = '\n';
 		l++;
 	}
-	for (i = 0; i < ac; i++)
-		free(av[i]);
-	s[l] = '\0';
 	return (s);
 }
 /**
