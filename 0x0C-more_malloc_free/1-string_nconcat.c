@@ -25,6 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int l1 = 0, l2 = 0, y = 0, i = 0;
 	char *p;
+
 	if (s1 != '\0')
 		l1 = _strlen(s1);
 	if (s2 != '\0')
