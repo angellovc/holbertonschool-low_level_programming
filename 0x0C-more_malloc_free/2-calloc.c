@@ -1,5 +1,10 @@
 #include <stdlib.h>
-
+/**
+ *_calloc - this is a calloc function
+ *@nmemb: number of elemets
+ *@size: size of elements
+ *Return: pointer to memory assignement
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p;
