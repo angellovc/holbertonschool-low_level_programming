@@ -15,10 +15,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	p = malloc(nmemb * size);
 	if (p == '\0')
 		return ('\0');
-	while (i <= size)
-	{
-		p[i]= '\0';
+	for (i = 0; i < size; i++)
+		p[i] = '\0';
 		i++;
-	}
 	return (p);
 }
