@@ -18,21 +18,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return ('\0');
 	}
-	p = malloc(new_size * sizeof(char));
+	p = malloc(new_size);
 	if (p == '\0')
 		return ('\0');
-	if (new_size < old_size)
-		for (i = 0; i < new_size; i++)
-		{
-			p[i] = p2[i];
-		}
-	else
-		for (i = 0; i < old_size; i++)
-		{
-			p[i] = p2[i];
-		}
-	if (new_size > old_size)
-		p[i] = '\0';
+	for (i = 0; i < new_size && i < old_size; i++)
+		p[i] = p2[i];
 	free(ptr);
 	return (p);
 }
