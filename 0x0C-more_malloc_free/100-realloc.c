@@ -18,6 +18,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return ('\0');
 	}
+	else if (ptr == '\0')
+		free(ptr);
 	p = malloc(new_size * sizeof(char));
 	if (p == '\0')
 		return ('\0');
