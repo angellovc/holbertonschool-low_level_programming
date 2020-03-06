@@ -18,8 +18,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return ('\0');
 	}
-	else if (ptr == '\0')
-		free(ptr);
 	p = malloc(new_size * sizeof(char));
 	if (p == '\0')
 		return ('\0');
@@ -29,7 +27,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			p[i] = p2[i];
 		}
 	else
-		for (i = 0; i < new_size; i++)
+		for (i = 0; i < old_size; i++)
 		{
 			p[i] = p2[i];
 		}
