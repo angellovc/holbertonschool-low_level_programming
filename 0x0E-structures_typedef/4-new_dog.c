@@ -21,8 +21,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	o = malloc(sizeof(owner));
 	if (o == '\0')
 		return ('\0');
-	ndog->name = name;
+	ndog->name = n;
 	ndog->age = age;
-	ndog->owner = owner;
+	ndog->owner = o;
 	return (ndog);
 }
