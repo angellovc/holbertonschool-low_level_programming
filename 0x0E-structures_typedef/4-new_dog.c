@@ -17,10 +17,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return ('\0');
 	n = malloc(sizeof(name));
 	if (n == '\0')
+	{
+		free(ndog);
 		return ('\0');
+	}
 	o = malloc(sizeof(owner));
 	if (o == '\0')
+	{
+		free(ndog);
+		free(n);
 		return ('\0');
+	}
 	ndog->name = n;
 	ndog->age = age;
 	ndog->owner = o;
