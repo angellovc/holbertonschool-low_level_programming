@@ -9,27 +9,26 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *n, *o;
 	dog_t *ndog;
 
 	ndog = malloc(sizeof(ndog));
 	if (ndog == '\0')
 		return ('\0');
-	n = malloc(sizeof(name));
-	if (n == '\0')
+	ndog->name = malloc(sizeof(name));
+	if (ndog->name == '\0')
 	{
 		free(ndog);
 		return ('\0');
 	}
-	o = malloc(sizeof(owner));
-	if (o == '\0')
+	ndog->owner = malloc(sizeof(owner));
+	if (ndog->owner == '\0')
 	{
 		free(ndog);
-		free(n);
+		free(ndog->name);
 		return ('\0');
 	}
-	ndog->name = n;
+	ndog->name = name;
 	ndog->age = age;
-	ndog->owner = o;
+	ndog->owner = owner;
 	return (ndog);
 }
