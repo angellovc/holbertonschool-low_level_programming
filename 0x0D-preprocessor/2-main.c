@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ *main - display the name of the .c file
+ *Return: 0
+ */
 int main(void)
 {
 	printf("%s\n", __FILE__);
