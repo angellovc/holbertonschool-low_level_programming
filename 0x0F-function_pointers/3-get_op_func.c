@@ -1,5 +1,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 /**
  *get_op_func - function that choose a functions based in the operator
  *@s: operator
@@ -17,11 +19,13 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (i <= 5)
+	while (i <= 4)
 	{
-		if (*s == ops[i].op[0])
+		printf("%c\n", ops[i].op[0]);
+		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
 		i++;
 	}
+	printf("Error\n");
 	exit(99);
 }

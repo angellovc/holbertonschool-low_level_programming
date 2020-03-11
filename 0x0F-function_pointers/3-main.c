@@ -14,9 +14,15 @@ int main(int c, char **av)
 
 	s = &*av[2];
 	if (c != 4)
+	{
+		printf("Error\n");
 		exit(98);
+	}
 	if ((*s == '/' && *av[3] == '0') || (*s == '%' && *av[3] == '0'))
+	{
+		printf("Error\n");
 		exit(100);
+	}
 	n1 = atoi(&*av[1]);
 	n2 = atoi(&*av[3]);
 
