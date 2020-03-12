@@ -24,6 +24,7 @@ int main(int ac, char **av)
 	}
 	for (i = 0; i < byte; i++)
 		printf("%02hhx ", p[i]);
+	i--;
 	printf("%02hhx\n", p[i]);
 	return (0);
 }
