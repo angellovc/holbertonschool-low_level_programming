@@ -14,12 +14,12 @@ int main(int ac, char **av)
 	byte = atoi(&*av[1]);
 	if (ac != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(1);
 	}
 	if (byte < 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(2);
 	}
 	for (i = 0; i < byte; i++)
