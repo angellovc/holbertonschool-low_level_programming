@@ -11,7 +11,7 @@ int main(int ac, char **av)
 	char *p = (char *)main;
 	int byte, i = 0;
 
-	byte = atoi(&*av[1]);
+	byte = atoi(av[1]);
 	if (ac != 2)
 	{
 		printf("Error\n");
@@ -24,7 +24,7 @@ int main(int ac, char **av)
 	}
 	for (i = 0; i < byte; i++)
 	{
-		if (i == (byte - 1))
+		if (i == (byte - 2))
 			printf("%02hhx\n", p[i]);
 		else
 			printf("%02hhx ", p[i]);
