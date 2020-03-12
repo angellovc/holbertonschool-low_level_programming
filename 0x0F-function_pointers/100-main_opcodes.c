@@ -23,11 +23,7 @@ int main(int ac, char **av)
 		exit(2);
 	}
 	for (i = 0; i < byte; i++)
-	{
-		if (i == (byte - 2))
-			printf("%02hhx\n", p[i]);
-		else
-			printf("%02hhx ", p[i]);
-	}
+		printf("%02hhx ", p[i]);
+	printf("%02hhx\n", p[i]);
 	return (0);
 }
