@@ -11,12 +11,12 @@ int main(int ac, char **av)
 	char *p = (char *)main;
 	int byte = 0, i = 0;
 
-	byte = atoi(av[1]);
 	if (ac != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+	byte = atoi(av[1]);
 	if (byte < 0)
 	{
 		printf("Error\n");
