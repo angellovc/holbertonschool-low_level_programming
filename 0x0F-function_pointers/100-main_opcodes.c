@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
 	char *p = (char *)main;
-	int byte, i = 0;
+	int byte = 0, i = 0;
 
 	byte = atoi(av[1]);
 	if (ac != 2)
