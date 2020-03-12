@@ -27,7 +27,7 @@ int main(int ac, char **av)
 		if (i == (byte - 1))
 			printf("%02hhx\n", p[i]);
 		else
-			printf("%02hhx", p[i]);
+			printf("%02hhx ", p[i]);
 	}
 	return (0);
 }
