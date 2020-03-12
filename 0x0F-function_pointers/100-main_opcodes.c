@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
+/**
+ *main - entry point
+ *@ac: arguments number
+ *@av: arguments
+ *Return: 0
+ */
 int main(int ac, char **av)
 {
 	char *p = (char *)main;
@@ -20,9 +24,10 @@ int main(int ac, char **av)
 	}
 	for (i = 0; i < byte; i++)
 	{
-		printf("%02hhx ", p[i]);
-		if (i == (byte -1))
+		if (i == (byte - 1))
 			printf("%02hhx\n", p[i]);
+		else
+			printf("%02hhx ", p[i]);
 	}
 	return (0);
 }
