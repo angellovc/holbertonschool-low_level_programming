@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "variadic_functions.h"
-
+/**
+ *print_all - print all kind of arguments into a variatinc function
+ *@format: data types
+ */
 void print_all(const char * const format, ...)
 {
+	char *separator = "";
 	va_list list;
 	unsigned int i = 0, y = 0;
-	void *p;
-	void (*f)(void *);
 	s_f s_format[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -17,41 +19,57 @@ void print_all(const char * const format, ...)
 		   };
 
 	va_start(list, format);
-	while (format[i] != '\0')
+	while (format != '\0' && format[i] != '\0')
 	{
 		y = 0;
 		while (y <= 3)
 		{
 			if (format[i] == s_format[y].type[0])
 			{
-				p = va_arg(list, void *);
-				if (p == '\0')
-					printf("(nil)");
-				f = s_format[y].f;
-				(*f)((void *)p);
-				break;
+				printf("%s", separator);
+				s_format[y].f(list);
+				separator = ", ";
 			}
 			y++;
 		}
 		i++;
-
 	}
-		   va_end(list);
+	va_end(list);
+	printf("\n");
+}
+/**
+ *print_char - print a char list
+ *@list: list from a variatic function
+ */
+void print_char(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+/**
+ *print_int - print a int list
+ *@list: list from a variatic function
+ */
+void print_int(va_list list)
+{
+	printf("%i", va_arg(list, int));
+}
+/**
+ *print_float - print a float list
+ *@list: list from a variatic function
+ */
+void print_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+/**
+ *print_string - print a string list
+ *@list: list from a variatic function
+ */
+void print_string(va_list list)
+{
+	char *p = va_arg(list, char*);
 
-}
-void print_char(void *p)
-{
-	printf("%c\n", *(char *)p);
-}
-void print_int(void *p)
-{
-	printf("%i\n", (*(int *)p));
-}
-void print_float(void *p)
-{
-	printf("%f\n", *(float *)p);
-}
-void print_string(void *p)
-{
-	printf("%s\n", (char *)p);
+	if (p == '\0')
+		return;
+	printf("%s", (char *)p);
 }
