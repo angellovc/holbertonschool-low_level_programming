@@ -12,20 +12,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 	char *p;
 
-	if (n == 0)
-		return;
 	if (separator == '\0')
 		return;
 	va_start(list, n);
 	for (i = 0; i < n; i++)
 	{
 		p = va_arg(list, char *);
-		if (p[0] == '\0')
-			return;
-		if (i != (n - 1))
+		if (i != (n - 1) && separator != '\0')
 			printf("%s%s", p, separator);
 		else
-			printf("%s\n", p);
+			printf("%s", p);
 	}
+	printf("\n");
 	va_end(list);
 }
