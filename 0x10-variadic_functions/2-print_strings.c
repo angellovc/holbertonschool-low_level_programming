@@ -21,8 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i != (n - 1) && separator != '\0')
 			printf("%s%s", p, separator);
 		else
-			printf("%s", p);
+			printf("%s\n", p);
 	}
-	printf("\n");
 	va_end(list);
 }
