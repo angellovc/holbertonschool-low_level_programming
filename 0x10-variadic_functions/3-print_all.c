@@ -70,6 +70,9 @@ void print_string(va_list list)
 	char *p = va_arg(list, char*);
 
 	if (p == '\0')
+	{
+		printf("(nil)");
 		return;
+	}
 	printf("%s", (char *)p);
 }
