@@ -9,7 +9,6 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	int len = 0;
-	int node;
 	list_t *last, *new;
 
 	last = (*head);
