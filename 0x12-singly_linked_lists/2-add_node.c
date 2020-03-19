@@ -19,12 +19,17 @@ list_t *add_node(list_t **head, const char *str)
 		return ('\0');
 	new->str = malloc(sizeof(len));
 	if (new->str == '\0')
+	{
+		free(new);
 		return ('\0');
+	}
 	if (str != '\0')
+	{
 		new->str = strdup(str);
+		new->len = len;
+	}
 	else
 		new->str = '\0';
-	new->len = len;
 	*head = new;
 	new->next = tmp;
 	return (new);
