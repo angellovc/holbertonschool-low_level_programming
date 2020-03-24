@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ *get_nodeint_at_index - get the position of a node
+ *@head: linked list
+ *@index: linked list position
+ *Return: node
+ */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int nth = 0;
@@ -15,5 +20,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		node = node->next;
 		nth++;
 	}
-	return(node);
+	return (node);
 }

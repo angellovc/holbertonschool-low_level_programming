@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ *delete_nodeint_at_index - delete a specific position
+ *@head: linked list
+ *@index: position
+ *Return: 1 if operation is succes, -1 if dont
+ */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *first_node, *last_node, *delete;
