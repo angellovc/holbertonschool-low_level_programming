@@ -7,9 +7,9 @@ void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
 
-	if ((*head) == '\0' || head == '\0')
+	if ((*head) == '\0')
 		return;
-	while ((*head) != '\0')
+	while (head->next != '\0')
 	{
 		tmp = (*head)->next;
 		free(*head);
