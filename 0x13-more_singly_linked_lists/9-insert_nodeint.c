@@ -38,17 +38,20 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		(*head) = new;
 		return (*head);
 	}
+	node;
+	tmp = '\0';
 	while (nth < idx && node != '\0')
 	{
 		if (node == '\0' && nth != idx)
 			return ('\0');
-		if (node->next != '\0')
-			node = node->next;
+		if (node == '\0')
+			break;
+		tmp = node;
+		node = node->next;
 		nth++;
 	}
-	tmp = node->next;
 	new = new_listint(n);
-	new->next = tmp;
-	node->next = new;
+	new->next = node;
+	tmp->next = new;
 	return (new);
 }
