@@ -38,11 +38,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		(*head) = new;
 		return (*head);
 	}
-	while (nth < idx)
+	while (nth < idx && node != '\0')
 	{
 		if (node == '\0' && nth != idx)
 			return ('\0');
-		node = node->next;
+		if (node->next != '\0')
+			node = node->next;
 		nth++;
 	}
 	tmp = node->next;
