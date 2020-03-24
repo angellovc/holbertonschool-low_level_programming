@@ -10,8 +10,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *first_node, *last_node, *delete;
 	unsigned int nth = 0;
 
-	if (head == '\0')
-		return (0);
+	if (head == '\0' || (*head) == '\0')
+		return (-1);
 	delete = (*head);
 	if (index == 0)
 	{
