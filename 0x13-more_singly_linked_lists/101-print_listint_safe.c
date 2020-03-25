@@ -9,7 +9,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *turtle, *bunny, *tmp;
-	size_t size = 0, count = 0;
+	size_t size = 0;
 
 	if (head == '\0')
 		exit(98);
@@ -18,7 +18,6 @@ size_t print_listint_safe(const listint_t *head)
 	while (head != '\0')
 	{
 		size++;
-		count++;
 		turtle = turtle->next;
 		if (bunny != '\0' && bunny->next->next != '\0')
 			bunny = bunny->next->next;
