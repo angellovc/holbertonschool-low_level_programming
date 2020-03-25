@@ -20,6 +20,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 	tmp = (*head);
+	node = tmp;
 	while (nth <= index)
 	{
 		if (tmp == '\0' && index > nth)
