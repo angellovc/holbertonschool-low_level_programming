@@ -2,37 +2,49 @@
 #include <stdio.h>
 #include "lists.h"
 /**
+ *find_loop - find a loop into a linked list
+ *@head: linked list
+ *Return: loop position
+ */
+listint_t *find_loop(listint_t *head)
+{
+	listint_t *turtle, *bunny;
+
+	bunny = head;
+	turtle = head;
+	while (turtle && bunny && bunny->next)
+	{
+		turtle = turtle->next;
+		bunny = bunny->next->next;
+		if (turtle == bunny)
+			return (bunny->next);
+	}
+	return ('\0');
+}
+/**
  *print_listint_safe - print int avoiding a loop
  *@head: linked list
  *Return: size of the linked list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *turtle, *bunny, *tmp;
-	size_t size = 0;
+	listint_t *node, *tmp;
+	size_t size = 0, step = 1, limit = 2;
 
-	if (head == '\0')
-		exit(98);
-	bunny = (listint_t *)head;
-	turtle = (listint_t *)head;
-	tmp = '\0';
-	while (head != '\0')
+	node = (listint_t *)head;
+	tmp = find_loop(node);
+	while (node != '\0')
 	{
-		turtle = turtle->next;
-		if (bunny != '\0' && bunny->next->next != '\0')
-			bunny = bunny->next->next;
-		else
-			bunny = '\0';
-		if (!((tmp != '\0') && (tmp == turtle || tmp == bunny)))
-			printf("[%p] %i\n", (void *)head, head->n);
-		if ((tmp != '\0') && (tmp == turtle || tmp == bunny))
+		if (step != limit)
+			printf("[%p] %i\n", (void *)node, node->n);
+		if (step == limit)
 		{
-			printf("-> [%p] %i\n", (void *)head, head->n);
+			printf("-> [%p] %i\n", (void *)node, node->n);
 			break;
 		}
-		if (turtle == bunny && size != 0)
-			tmp = turtle;
-		head = head->next;
+		if (node == tmp)
+			step++;
+		node = node->next;
 		size++;
 	}
 	return (size);
