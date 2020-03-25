@@ -32,7 +32,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t size = 0, step = 1, limit = 2;
 
 	if (head == '\0')
-		exit (98);
+		return ('\0');
 
 	node = (listint_t *)head;
 	tmp = find_loop(node);
