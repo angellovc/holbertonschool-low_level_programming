@@ -7,9 +7,10 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *node;
-
+	if (head == '\0')
+		return ('\0');
 	node = head;
-	while (node->next != '\0')
+	while (node != '\0')
 	{
 		if (node- node->next <= 0)
 			return (node->next);
