@@ -15,7 +15,7 @@ size_t free_listint_safe(listint_t **h)
 	{
 		if ((*h) - (*h)->next <= 0)
 		{
-			free(tmp);
+			free((*h));
 			size++;
 			break;
 		}
@@ -24,5 +24,6 @@ size_t free_listint_safe(listint_t **h)
 		(*h) = tmp;
 		size++;
 	}
+	*h = '\0';
 	return (size);
 }
