@@ -14,7 +14,7 @@ listint_t *find_listint_loop(listint_t *head)
 	while (bunny != '\0')
 		bunny = bunny->next;
 	if (bunny == '\0')
-		return ('\0');
+		return (bunny);
 	turtle = head;
 	while (turtle != '\0')
 	{
