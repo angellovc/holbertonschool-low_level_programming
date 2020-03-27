@@ -14,7 +14,7 @@ listint_t *find_listint_loop(listint_t *head)
 	{
 		tmp = node;
 		node = node->next;
-		if (tmp - node->next == 0)
+		if (tmp - node->next <= 0)
 			return (node->next);
 	}
 	return ('\0');
