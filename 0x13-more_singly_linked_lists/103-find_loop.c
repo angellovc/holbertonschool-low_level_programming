@@ -6,16 +6,16 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *turtle, *bunny;
+	listint_t *node;
 
-	bunny = head;
-	turtle = head;
-	while (turtle && bunny && bunny->next)
+	if (head == '\0')
+		return ('\0');
+	node = head;
+	while (node)
 	{
-		turtle = turtle->next;
-		bunny = bunny->next->next;
-		if (turtle == bunny)
-			return (turtle);
+		if (node - node->next <= 0)
+			return (node->next);
+		node = node->next;
 	}
 	return ('\0');
 }
