@@ -10,11 +10,11 @@ listint_t *find_listint_loop(listint_t *head)
 
 	tmp = head;
 	node = head;
-	while (node != '\0')
+	while (node->next != '\0')
 	{
 		tmp = node;
 		node = node->next;
-		if (tmp - node == 0)
+		if (tmp - node->next == 0)
 			return (node->next);
 	}
 	return ('\0');
