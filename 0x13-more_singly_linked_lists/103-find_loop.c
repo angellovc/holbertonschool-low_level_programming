@@ -6,9 +6,8 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *node, *tmp;
+	listint_t *node;
 
-	tmp = head;
 	node = head;
 	while (node->next != '\0')
 	{
