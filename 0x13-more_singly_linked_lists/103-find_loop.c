@@ -6,20 +6,14 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *bunny, *turtle;
+	listint_t *turtle, *bunny;
 
 	if (head == '\0')
 		return ('\0');
 	bunny = head;
-	turtle = head;
-	while (bunny != '\0' && turtle != '\0')
-	{
-		turtle = turtle->next;
-		bunny = bunny->next->next;
-		if (bunny == turtle)
-			return ('\0');
-	}
-	if (bunny == '\0' || bunny->next == '\0')
+	while (bunny != '\0')
+		bunny = bunny->next;
+	if (bunny == '\0')
 		return ('\0');
 	turtle = head;
 	while (turtle != '\0')
