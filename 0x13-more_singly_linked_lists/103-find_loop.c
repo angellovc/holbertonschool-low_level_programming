@@ -6,28 +6,16 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t **node;
-	size_t i = 0;
+	listint_t *node, *tmp;
 
-	node = &head;
-	node[0] = head;
-	while (node[0] != '\0')
+	tmp = head;
+	node = head;
+	while (node != '\0')
 	{
-		if (node[0] - node[0]->next <= 0)
-		{
-			node[1] = node[0]->next;
-			break;
-		}
-		node[0] = node[0]->next;
-		i++;
+		tmp = node;
+		node = node->next;
+		if (tmp - node == 0)
+			return (node->next);
 	}
-	node[0] = head;
-	while (i != 0)
-	{
-		if (node[0]->next == '\0')
-			return ('\0');
-		node[0] = node[0]->next;
-		i--;
-	}
-	return (node[0]);
+	return ('\0');
 }
