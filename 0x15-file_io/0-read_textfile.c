@@ -30,12 +30,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	y = write(STDOUT_FILENO, str, i);
-	if (y == -1 || i != y)
+	if (y == -1)
 	{
 		free(str);
 		return (0);
 	}
 	close(fd);
 	free(str);
-	return (letters);
+	return (y);
 }
