@@ -30,6 +30,21 @@ listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
+/**
+ * struct list_a - singly linked list
+ * @letter: letter
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
+typedef struct list_a
+{
+	char letter;
+	struct list_alpha *next;
+} list_alpha;
+int find_palindrome(list_alpha *head);
+list_alpha *add_letter_node(list_alpha **head, char letter);
+
 
 
 #endif
