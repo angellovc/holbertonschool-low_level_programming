@@ -13,11 +13,11 @@
 void errors(int n, char *from, char *to)
 {
 	if (n == 97)
-		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	if (n == 98)
-		dprintf(2, "Error: Can't read from file %s\n", from), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from), exit(98);
 	if (n == 99)
-		dprintf(2, "Error: Can't write to %s\n", to), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to), exit(99);
 }
 /**
  *main - copy a file content in another file
@@ -50,9 +50,9 @@ int main(int ac, char **av)
 	} while (readed > 0);
 	c = close(fd[0]);
 	if (c == -1)
-		dprintf(2, "Error: Can't write to %i\n", fd[0]), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't write to %i\n", fd[0]), exit(100);
 	c = close(fd[1]);
 	if (c == -1)
-		dprintf(2, "Error: Can't write to %i\n", fd[1]), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't write to %i\n", fd[1]), exit(100);
 	return (0);
 }
