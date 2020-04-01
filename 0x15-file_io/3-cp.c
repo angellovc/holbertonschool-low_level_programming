@@ -35,7 +35,7 @@ int main(int ac, char **av)
 	fd[0] = open(&*av[1], O_RDONLY);
 	if (fd[0] == -1)
 		errors(98, &*av[1], &*av[2]);
-	fd[1] = open(&*av[2], O_CREAT | O_WRONLY, 00664);
+	fd[1] = open(&*av[2], O_CREAT | O_WRONLY, 0664);
 	if (fd[1] == -1)
 		fd[1] = open(&*av[2], O_TRUNC | O_WRONLY);
 	if (fd[1] == -1)
