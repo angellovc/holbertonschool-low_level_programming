@@ -45,7 +45,7 @@ int main(int ac, char **av)
 		if (readed == -1)
 			errors(99, &*av[1], &*av[2]);
 		writed = write(fd[1], buff, readed);
-		if (readed != writed)
+		if (writed == -1)
 			errors(99, &*av[1], &*av[2]);
 	} while (readed > 0);
 	c = close(fd[0]);
