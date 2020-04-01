@@ -4,7 +4,12 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
-
+/**
+ *errors - print errors
+ *@n: error number
+ *@from: first file
+ *@to: second file
+ */
 void errors(int n, char *from, char *to)
 {
 	if (n == 97)
@@ -14,6 +19,12 @@ void errors(int n, char *from, char *to)
 	if (n == 99)
 		dprintf(2, "Error: Can't write to %s\n", to), exit(99);
 }
+/**
+ *main - copy a file content in another file
+ *@ac: number of arguments
+ *@av: arguments
+ *Return: 0
+ */
 int main(int ac, char **av)
 {
 	int fd[2], readed = 0, writed = 0, c = 0;
@@ -29,12 +40,11 @@ int main(int ac, char **av)
 		fd[1] = open(&*av[2], O_TRUNC | O_RDWR);
 	if (fd[1] == -1)
 		errors(99, &*av[1], &*av[2]);
-	do
-	{
+	do {
 		readed = read(fd[0], buff, 1024);
 		if (readed == -1)
 			errors(99, &*av[1], &*av[2]);
-	        writed = write(fd[1], buff, readed);
+		writed = write(fd[1], buff, readed);
 		if (readed != writed)
 			errors(99, &*av[1], &*av[2]);
 	} while (readed > 0);
@@ -44,5 +54,5 @@ int main(int ac, char **av)
 	c = close(fd[1]);
 	if (c == -1)
 		dprintf(2, "Error: Can't write to %i\n", fd[1]), exit(100);
-	return (0);
+	return (1);
 }
