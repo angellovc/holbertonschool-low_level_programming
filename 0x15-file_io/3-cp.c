@@ -54,5 +54,5 @@ int main(int ac, char **av)
 	c = close(fd[1]);
 	if (c == -1)
 		dprintf(2, "Error: Can't write to %i\n", fd[1]), exit(100);
-	return (1);
+	return (0);
 }
