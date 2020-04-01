@@ -2,73 +2,47 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
 
+void errors(int n, char *from, char *to)
+{
+	if (n == 97)
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+	if (n == 98)
+		dprintf(2, "Error: Can't read from file %s\n", from), exit(98);
+	if (n == 99)
+		dprintf(2, "Error: Can't write to %s\n", to), exit(99);
+}
 int main(int ac, char **av)
 {
-	int i = 0;
+	int fd[2], readed = 0, writed = 0, c = 0;
+	char buff[1024];
 
 	if (ac != 3)
+		errors(97, &*av[1], &*av[2]);
+	fd[0] = open(&*av[1], O_RDONLY);
+	if (fd[0] == -1)
+		errors(98, &*av[1], &*av[2]);
+	fd[1] = open(&*av[2], O_CREAT | O_RDWR, 0664);
+	if (fd[1] == -1)
+		fd[1] = open(&*av[2], O_TRUNC | O_RDWR);
+	if (fd[1] == -1)
+		errors(99, &*av[1], &*av[2]);
+	do
 	{
-		write(2, "Usage: cp file_from file_to\n", 28);
-		exit(97);
-	}
-	i = _cp(&*av[1], &*av[2]);
-}
-int _cp(char *file_from, char *file_to)
-{
-	int fd[2], i = 0, y = 1, buf_size = 1024;
-	char buffer[1024];
-	char *str;
-
-	fd[0] = open_files(file_from, '\0');
-	fd[1] = open_files('\0', file_to);
-	while (y < buf_size)
-	{
-		y = read(fd[0], buffer, buf_size);
-		if (y == -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", file_from);
-			exit(98);
-		}
-		i = i + y;
-		printf("y = %i\n", y);
-		if (y < buf_size)
-			break;
-		buf_size += 1024;
-	}
-	str = malloc(sizeof(char) * i);
-	if (str == '\0')
-		return (-1);
-}
-int open_files(char *file_from, char *file_to)
-{
-	int fd[2];
-
-	if (file_from != '\0')
-	{
-		fd[0] = open(file_from, O_RDONLY);
-		if (fd[0] == -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", file_from);
-			exit(98);
-		}
-		else
-			return (fd[0]);
-	}
-	if (file_to != '\0')
-	{
-		fd[1] = open(file_to, O_CREAT, 0664);
-		if (fd[1] == -1)
-		{
-			fd[1] = open (file_to, O_TRUNC);
-			if (fd[1] == -1)
-				return (-1);
-			else
-				return (fd[1]);
-		}
-		else
-			return (fd[1]);
-	}
-	return (-1);
+		readed = read(fd[0], buff, 1024);
+		if (readed == -1)
+			errors(99, &*av[1], &*av[2]);
+	        writed = write(fd[1], buff, readed);
+		if (readed != writed)
+			errors(99, &*av[1], &*av[2]);
+	} while (readed > 0);
+	c = close(fd[0]);
+	if (c == -1)
+		dprintf(2, "Error: Can't write to %i\n", fd[0]), exit(100);
+	c = close(fd[1]);
+	if (c == -1)
+		dprintf(2, "Error: Can't write to %i\n", fd[1]), exit(100);
+	return (0);
 }
