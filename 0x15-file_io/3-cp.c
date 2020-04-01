@@ -43,7 +43,7 @@ int main(int ac, char **av)
 	do {
 		readed = read(fd[0], buff, 1024);
 		if (readed == -1)
-			errors(99, &*av[1], &*av[2]);
+			errors(98, &*av[1], &*av[2]);
 		writed = write(fd[1], buff, readed);
 		if (writed == -1)
 			errors(99, &*av[1], &*av[2]);
