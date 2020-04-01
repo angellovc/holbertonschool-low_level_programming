@@ -50,9 +50,9 @@ int main(int ac, char **av)
 	} while (readed > 0);
 	c = close(fd[0]);
 	if (c == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %i\n", fd[0]), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd[0]), exit(100);
 	c = close(fd[1]);
 	if (c == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %i\n", fd[1]), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd[1]), exit(100);
 	return (0);
 }
