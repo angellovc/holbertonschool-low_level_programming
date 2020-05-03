@@ -1,5 +1,8 @@
 #include "lists.h"
-
+/**
+ *free_dlistint - free a double linked list
+ *@head: double linked list
+ */
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *tmp;
