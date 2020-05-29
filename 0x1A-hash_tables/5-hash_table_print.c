@@ -27,6 +27,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i = 0;
 	int up = 0;
 
+	if (ht == '\0')
+		return;
+
 	printf("{");
 	while (i < ht->size)
 	{
