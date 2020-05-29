@@ -20,7 +20,6 @@ void print_hash_node(hash_node_t *node)
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *node;
 	unsigned long int i = 0;
 	int up = 0;
 
@@ -31,7 +30,6 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (up == 1)
 				printf(", ");
-			node = ht->array[i];
 			print_hash_node(ht->array[i]);
 			up = 1;
 		}
