@@ -45,5 +45,6 @@ int add_in_array(hash_table_t *ht, hash_node_t *node, unsigned long int index);
 void add_in_node(hash_table_t *, hash_node_t *, unsigned long int);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
+void hash_table_delete(hash_table_t *ht);
 
 #endif /* HASH_TABLES_H */
