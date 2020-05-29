@@ -6,12 +6,16 @@
  */
 void print_hash_node(hash_node_t *node)
 {
-	while (node != '\0')
+	while (node->next != '\0')
 	{
 		printf("'%s': ", node->key);
 		printf("'%s'", node->value);
 		node = node->next;
+		printf(", ");
 	}
+	printf("'%s': ", node->key);
+	printf("'%s'", node->value);
+	node = node->next;
 
 }
 /**
