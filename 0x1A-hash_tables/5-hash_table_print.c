@@ -32,7 +32,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (up == 1)
 				printf(", ");
 			node = ht->array[i];
-			pint_hash_node(ht->array[i]);
+			print_hash_node(ht->array[i]);
 			up = 1;
 		}
 		i++;
