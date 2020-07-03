@@ -6,11 +6,11 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(SRC:.c=.o)
 	$(CC) $^ -o $(NAME)
 
-clean:
+clean: $(SRC:.c=.o)
 	$(RM) *~ $(NAME)
 
-oclean:
-	$(RM) $(OBJ)
+oclean: $(SRC:.c=.o)
+	$(RM) $^
 
 fclean: clean oclean
 
