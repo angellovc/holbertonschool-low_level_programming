@@ -1,5 +1,5 @@
-#ifndef HOLBIE_FUNC_H
-#define HOLBIE_FUNC_H
+#ifndef M_H
+#define M_H
 
 #include <stdio.h>
 
