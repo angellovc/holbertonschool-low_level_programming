@@ -6,4 +6,5 @@
 int main(void)
 {
 	print_hippocamper();
+	return (0);
 }
