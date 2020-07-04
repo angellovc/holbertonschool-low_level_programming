@@ -35,12 +35,13 @@ def check_perimeter(grid, x, y):
         [counter]: [the total sum of each 0 around the given position]
     """
     counter = 0
-    if grid[y][x + 1] == 0:
+    if x + 1 <= len(grid[y]) and grid[y][x + 1] == 0:
         counter += 1
-    if grid[y][x - 1] == 0:
+    if x - 1 >= 0 and grid[y][x - 1] == 0:
         counter += 1
-    if grid[y - 1][x] == 0:
+    if y - 1 >= 0 and grid[y - 1][x] == 0:
         counter += 1
-    if grid[y + 1][x] == 0:
+    if y + 1 <= len(grid) and grid[y + 1][x] == 0:
         counter += 1
     return counter
+        
