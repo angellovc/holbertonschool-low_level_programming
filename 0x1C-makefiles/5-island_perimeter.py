@@ -44,4 +44,3 @@ def check_perimeter(grid, x, y):
     if y + 1 < len(grid) and grid[y + 1][x] == 0:
         counter += 1
     return counter
-        
