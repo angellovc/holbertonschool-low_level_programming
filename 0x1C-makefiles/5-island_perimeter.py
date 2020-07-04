@@ -14,7 +14,6 @@ def island_perimeter(grid):
         [perimeter]: [land perimeter]
     """
     perimeter = 0
-    counter = 0
     for row, y in zip(grid, range(0, len(grid))):
         for x in range(0, len(row)):
             if row[x] == 1:
