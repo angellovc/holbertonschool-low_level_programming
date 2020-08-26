@@ -8,7 +8,7 @@
  */
 void print_search(int *array, size_t first, size_t last)
 {
-	int i = first;
+	size_t i = first;
 
 	printf("Searching in array: ");
 	for (; i <= last; i++)
@@ -28,7 +28,6 @@ void print_search(int *array, size_t first, size_t last)
  */
 int binary(int *array, size_t first, size_t last, int value)
 {
-	int i = first;
 	size_t mid = 0;
 
 	mid = (first + last) / 2;
@@ -54,7 +53,5 @@ int binary(int *array, size_t first, size_t last, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int i = 0;
-
 	return (binary(array, 0, size, value));
 }
