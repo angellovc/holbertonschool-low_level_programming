@@ -53,5 +53,7 @@ int binary(int *array, size_t first, size_t last, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	if (array == NULL)
+		return (-1);
 	return (binary(array, 0, size, value));
 }
