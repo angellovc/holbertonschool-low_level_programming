@@ -79,6 +79,8 @@ int expo_algorithm(int *array, size_t size, size_t position, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
+	if (array == NULL)
+		return (-1);
 	if (array[0] == value)
 		return (0);
 	return (expo_algorithm(array, size - 1, 1, value));
