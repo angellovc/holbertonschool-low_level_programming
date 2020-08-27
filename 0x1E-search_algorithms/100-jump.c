@@ -6,9 +6,11 @@
  * @position: array position
  * @size: array size
  * @value: value to search for
+ * @jump: jump space
  * Return: index where the element was found, -1 in failure
  **/
-int jump_algorithm(int *array, size_t size, size_t position, int value, int jump)
+int jump_algorithm(int *array, size_t size, size_t position, int value,
+int jump)
 {
 	size_t last;
 
