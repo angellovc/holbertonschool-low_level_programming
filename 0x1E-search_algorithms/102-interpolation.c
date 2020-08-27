@@ -10,7 +10,7 @@
 int interpolation_algorithm(int *array, size_t low, size_t high, int value)
 {
 	size_t pos = low + (
-		(double)(high - low) / (array[high] - array[low])
+		T
 		) * (value - array[low]);
 
 	if (low > high || value < array[low] || value > array[high])
@@ -40,5 +40,7 @@ int interpolation_algorithm(int *array, size_t low, size_t high, int value)
  **/
 int interpolation_search(int *array, size_t size, int value)
 {
+	if (array == NULL)
+		return (-1);
 	return (interpolation_algorithm(array, 0, size - 1, value));
 }
