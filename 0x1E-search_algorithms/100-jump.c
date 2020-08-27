@@ -37,7 +37,7 @@ int jump_algorithm(int *array, size_t size, size_t position, int value)
 		);
 		while (position <= size)
 		{
-			printf("Value checked array[%li] = [%i]\n", position, array[position]);
+			printf("Value checked array[%li] = [%i]\n", position, array[size]);
 			if (array[position] == value)
 				return (position);
 			position++;
