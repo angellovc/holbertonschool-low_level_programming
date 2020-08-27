@@ -6,13 +6,11 @@
  * @position: array position
  * @size: array size
  * @value: value to search for
- * @jump: jump space
  * Return: index where the element was found, -1 in failure
  **/
-int jump_algorithm(int *array, size_t size, size_t position, int value,
-int jump)
+int jump_algorithm(int *array, size_t size, size_t position, int value)
 {
-	size_t last;
+	size_t jump = (size_t)sqrt(size), last;
 
 	if (array[position] >= value)
 	{
@@ -48,7 +46,7 @@ int jump)
 		return (-1);
 	}
 	printf("Value checked array[%li] = [%i]\n", position, array[position]);
-	return (jump_algorithm(array, size, position + jump, value, jump));
+	return (jump_algorithm(array, size, position + jump, value));
 }
 /**
  * jump_search - prepare the terrain for jump algorithm implementation
@@ -59,9 +57,7 @@ int jump)
  **/
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump = (size_t)sqrt(size);
-
 	if (array == NULL || size <= 1)
 		return (-1);
-	return (jump_algorithm(array, size - 1, 0, value, jump));
+	return (jump_algorithm(array, size - 1, 0, value));
 }
