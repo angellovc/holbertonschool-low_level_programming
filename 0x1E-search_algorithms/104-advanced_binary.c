@@ -34,7 +34,7 @@ int binary(int *array, size_t first, size_t last, int value)
 
 	print_search(array, first, last);
 
-	if (array[mid] == value)
+	if (array[mid] == value && array[mid - 1] != value)
 		return (mid);
 
 	if (first >= last)
@@ -45,13 +45,13 @@ int binary(int *array, size_t first, size_t last, int value)
 	return (binary(array, first, mid - 1, value));
 }
 /**
- *binary_search - binary search algorithm
+ *advanced_binary - binary search algorithm
  *@array: array
  *@size: array size
  *@value: value to search for
- *Return: index of the element searched or -1 in failure
+ *Return: the first occurence index or -1 in failure
  */
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
