@@ -38,7 +38,7 @@ int binary(int *array, size_t first, size_t last, int value)
 		return (mid);
 	if (array[mid] == value && mid == 0)
 		return (mid);
-	if (array[mid - 1] == value && value == array[mid])
+	if (array[mid - 1] == value)
 		mid++;
 	if (first >= last)
 		return (-1);
