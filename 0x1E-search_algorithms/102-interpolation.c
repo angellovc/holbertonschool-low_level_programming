@@ -9,11 +9,9 @@
  **/
 int interpolation_algorithm(int *array, size_t low, size_t high, int value)
 {
-	size_t pos;
-
-	pos = ((double)(high - low) / (array[high] - array[low]));
-	pos *= (value - array[low]);
-	pos += low;
+	size_t pos = low + (
+		(double)(high - low) / (array[high] - array[low])
+		) * (value - array[low]);
 
 	if (low > high || value < array[low] || value > array[high])
 	{
