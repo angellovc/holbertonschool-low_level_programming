@@ -28,7 +28,7 @@ int jump_algorithm(int *array, size_t size, size_t position, int value)
 		}
 		return (-1);
 	}
-	else if (position > size)
+	else if (position >= size)
 	{
 		position = position - jump;
 		printf("Value found between indexes [%li] and [%li]\n",
@@ -37,7 +37,7 @@ int jump_algorithm(int *array, size_t size, size_t position, int value)
 		);
 		while (position <= size)
 		{
-			printf("Value checked array[%li] = [%i]\n", position, array[size]);
+			printf("Value checked array[%li] = [%i]\n", position, array[position]);
 			if (array[position] == value)
 				return (position);
 			position++;
