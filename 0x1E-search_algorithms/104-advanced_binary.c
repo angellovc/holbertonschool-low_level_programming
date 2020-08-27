@@ -36,7 +36,7 @@ int binary(int *array, size_t first, size_t last, int value)
 
 	if (array[mid] == value && array[mid - 1] != value)
 		return (mid);
-	if (array[mid - 1] == value)
+	if (array[mid - 1] == value && array[mid] == value)
 		mid++;
 	if (first >= last)
 		return (-1);
