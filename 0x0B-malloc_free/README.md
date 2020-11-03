@@ -40,9 +40,6 @@ What you should learn from this project:
 * Write a function that concatenates all the arguments of your program.
 
 
-### [6. I will show you how great I am](./100-strtow.c)
-* Write a function that splits a string into words.
-
 ---
 
 ## Author
