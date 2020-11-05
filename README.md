@@ -2,6 +2,8 @@
 
 This is a Low Level Foundations repository created to learn the main principies behind low level programming, master the logical skills in coding and convert it into a guide to others students or developers.
 
+---
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -9,13 +11,15 @@ This is a Low Level Foundations repository created to learn the main principies 
 * [Instalation](#Instalation)
 * [Standart Library](#standart-library)
 * [Libraries and Make Files](#installation)
+* [Preprocessor](#preprocessor)
 * [Data Structure and Algorithms](#data-structure-and-algorithms)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
+* [Make Files and Libraries](#make-files-and-libraries)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
+
+---
 
 ## About The Project
 **What is a Low Level Programming Language**
@@ -32,16 +36,19 @@ Today there are a lot of languages which easy the developers life being very sim
 
 Why you would want to learn C even if your not interested in low level? No matter the area in which you want to work, as developer, C will give you a better understanding about how the memory works and what is happening on behind of high leve languanges like python or javascript. 
 
+---
 
 ## Instalation
 This programs and functions might be compiled with ***gcc 4.8.4*** using the flags ***-Wall -Werror -Wextra and -pedantic***
+
+---
 
 ## Standart Library
 This Project series is created to get the first look into the C language by creating the most populars functions found in the standard library
 
 ### [1. Hello World](./0x00-hello_world)
 Achieved knowledges:
-* What is an entry point
+* entry point
 * What is main
 * How to compile using gcc
 * How to find the right header to include in your source code
@@ -135,7 +142,9 @@ Achieved Knowledges:
 * How to use va_start, va_arg and va_end macros
 * Why and how to use the const type qualifier
 
-## preprocessor
+---
+
+## Preprocessor
 How to take advantage of the compiller preprocessor phase
 ### [1. Preprocessor](./0x0D-preprocessor)
 Achieved Knowledges:
@@ -143,6 +152,7 @@ Achieved Knowledges:
 * What are the most common predefined macros
 * How to include guard your header files
 
+---
 
 ## Data Structure and Algorithms
 Algorithms and data structures are generally created independent of underlying languages, most of the complex structures found in high level languages are created in C
@@ -172,8 +182,9 @@ Achieved Knowledges:
 * What are the advantages and drawbacks of using hash tables
 * What are the most common use cases of hash tables
 
+---
 
-# Make Files and Libraries
+## Make Files and Libraries
 ### [1. Static libraries](./0x09-static_libraries)
 Achieved Knowledges:
 * What are macros and how to use them
@@ -194,12 +205,29 @@ Achieved Knowledges:
 * What are the most common / useful rules
 * What are variables and how to set and use them
 
+### [4. FIFO and LIFO](https://github.com/angellovc/monty)
+* Monty is a interpreted language which manage LIFO and FIFO
+* What do LIFO and FIFO mean
+* What is a stack, and when to use it
+* What is a queue, and when to use it
+* What is the proper way to use global variables
 
+---
 
+## Bit manipulation and File IO
+Apart from some assembler files in the projects, this is one of the most low level projects in which the memory will be accessed managin his binary numbers and at the same time file descriptors will be used to create a shell interpreter.
+
+### [1. Bit manipulation](./0x14-bit_manipulation)
+Achieved Knowledges:
+* Look for the right source of information without too much help
+* How to manipulate bits and use bitwise operators
+
+### [2. File I/O](./0x15-file_io)
+Achieved Knowledges:
+* What are the 3 standard file descriptors, what are their purpose and what are their POSIX names
+* How to use the I/O system calls open, close, read and write
+* What are and how to use the flags O_RDONLY, O_WRONLY, O_RDWR
 0x09
 
-
-Files deleted or Modified: README udpated
-
-README have been updated with relevant information about the project
-Unnecessary files were deleted files:
+### [3. Simple Shell](https://github.com/angellovc/simple_shell)
+A simple shell is a program that takes input from you in the form of commands, processes it, and then gives an output. It is the interface through which a user works on the programs and commands.
