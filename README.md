@@ -14,10 +14,8 @@ This is a Low Level Foundations repository created to learn the main principies 
 * [Preprocessor](#preprocessor)
 * [Data Structure and Algorithms](#data-structure-and-algorithms)
 * [Make Files and Libraries](#make-files-and-libraries)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Bit manipulation and File IO](#bit-manipulation-and-file-io)
+* [Author](#author)
 
 ---
 
@@ -182,6 +180,8 @@ Achieved Knowledges:
 * What are the advantages and drawbacks of using hash tables
 * What are the most common use cases of hash tables
 
+
+
 ---
 
 ## Make Files and Libraries
@@ -212,6 +212,27 @@ Achieved Knowledges:
 * What is a queue, and when to use it
 * What is the proper way to use global variables
 
+### [5. Sorting_algorithms](https://github.com/angellovc/sorting_algorithms)
+* At least four different sorting algorithms
+* What is the Big O notation, and how to evaluate the time complexity of an algorithm
+* How to select the best sorting algorithm for a given input
+* What is a stable sorting algorithm
+
+### [6. Binary trees](https://github.com/angellovc/binary_trees)
+* What is a binary tree
+    What is the difference between a binary tree and a Binary Search Tree
+    What is the possible gain in terms of time complexity compared to linked lists
+    What are the depth, the height, the size of a binary tree
+    What are the different traversal methods to go through a binary tree
+    What is a complete, a full, a perfect, a balanced binary tree
+
+### [7. Search Algorithms](0x1E-search_algorithms)
+* What is a search algorithm
+* What is a linear search
+* What is a binary search
+* What is the best search algorithm to use depending on your needs
+
+
 ---
 
 ## Bit manipulation and File IO
@@ -231,3 +252,8 @@ Achieved Knowledges:
 
 ### [3. Simple Shell](https://github.com/angellovc/simple_shell)
 A simple shell is a program that takes input from you in the form of commands, processes it, and then gives an output. It is the interface through which a user works on the programs and commands.
+
+---
+
+## Author
+* **Angello Villegas** - [angellovc](https://github.com/angellovc)
